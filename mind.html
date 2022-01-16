@@ -17,19 +17,21 @@
         preload="auto" id="vid" response-type="arraybuffer" loop crossorigin="anonymous" webkit-playsinline autoplay muted
         playsinline>
       </video>
+      <img id="photo" crossorigin="anonymous" src="https://res.cloudinary.com/daqm1fsjr/image/upload/v1641169806/UYKD%20Leng%20Zaab.jpg"/>
       <a-asset-item id="raccoonModel"
         src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/band-example/raccoon/scene.gltf">
       </a-asset-item>
     </a-assets>
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-
+    
     <a-entity mindar-image-target="targetIndex: 0">
-      <a-video src="#lengzaab-Video" width="16" height="9" position="0 0 -20"></a-video>
-    </a-entity>
-    <a-entity mindar-image-target="targetIndex: 1">
+      <a-plane src="#photo" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
       <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.05 0.05 0.05" src="#raccoonModel" animation-mixer>
     </a-entity>
+    <a-entity mindar-image-target="targetIndex: 1">
+      <a-plane src="#lengzaab-Video" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+    
   </a-scene>
 </body>
 
