@@ -24,9 +24,10 @@
         playsinline>
       </video >
 
-       <video id='vid' src="https://res.cloudinary.com/daqm1fsjr/video/upload/v1641141778/original-9D92B4C7-76C9-4952-99F9-491DE7924EEF_ms5gu7.mp4" crossorigin="anonymous"></video>
-      
-      <img id="photo" crossorigin="anonymous" src="https://res.cloudinary.com/daqm1fsjr/image/upload/v1641169806/UYKD%20Leng%20Zaab.jpg"/>
+       <video id='vid' src="https://res.cloudinary.com/daqm1fsjr/video/upload/v1641141778/original-9D92B4C7-76C9-4952-99F9-491DE7924EEF_ms5gu7.mp4" 
+      crossorigin="anonymous"
+      ></video>
+
       <a-asset-item id="raccoonModel"
         src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/band-example/raccoon/scene.gltf">
       </a-asset-item>
@@ -34,12 +35,12 @@
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-    <a-entity mindar-image-target="targetIndex: 0">
+    <a-entity mindar-image-target="targetIndex: 0" id="2">
       <a-video src="#lengzaab-Video" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-video>
       <a-gltf-model rotation="0 0 0 " position="0 -0.25 0" scale="0.25 0.25 0.25" src="#raccoonModel" animation-mixer>
     </a-entity>
     <a-entity mindar-image-target="targetIndex: 1">
-      <a-plane src="#vid" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+      <a-plane src="#vid" position="0 0 0" height="1" width="0.552" rotation="0 0 0"></a-plane>
     
   </a-scene>
   
