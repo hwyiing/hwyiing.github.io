@@ -52,28 +52,31 @@
 
       });
 
+      const myTarget = document.querySelector('#my-target');
+      const myPlane = document.querySelector("#my-plane");
+      if (myTarget) {
+        myTarget.addEventListener("targetFound", event => {
+          console.log("my target found");
+        });
+
+        // detect target lost
+        myTarget.addEventListener("targetLost", event => {
+          console.log("my target lost");
+        });
+
+        // detect click event
+        myPlane.addEventListener("click", event => {
+          console.log("my plane click");
+
+          var vid = document.querySelector('#vid1');
+          vid.play();
+        });
+      }
+
+
     });
 
-    const myTarget = document.querySelector('#my-target');
-    const myPlane = document.querySelector("#my-plane");
-    if (myTarget) {
-      myTarget.addEventListener("targetFound", event => {
-        console.log("my target found");
-      });
 
-      // detect target lost
-      myTarget.addEventListener("targetLost", event => {
-        console.log("my target lost");
-      });
-
-      // detect click event
-      myPlane.addEventListener("click", event => {
-        console.log("my plane click");
-
-        var v = document.querySelector('#vid1');
-        v.play();
-      });
-    }
 
 
 
@@ -87,7 +90,7 @@
     renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
     device-orientation-permission-ui="enabled: false">
     <a-assets>
-       <video id='vid'
+       <video id="vid2"
         src="https://res.cloudinary.com/daqm1fsjr/video/upload/v1641141778/original-9D92B4C7-76C9-4952-99F9-491DE7924EEF_ms5gu7.mp4"
         crossorigin="anonymous">
       </video>
