@@ -1,6 +1,8 @@
 <html>
 
 <head>
+  <link rel="shortcut icon" href="./favicon/favicon.ico" >
+  <link rel="icon" type="image/gif" href="./favicon/animated_favicon1.gif" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport"
     content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
@@ -68,7 +70,8 @@
     <a-assets>
        <video id='vid'
         src="https://res.cloudinary.com/daqm1fsjr/video/upload/v1641141778/original-9D92B4C7-76C9-4952-99F9-491DE7924EEF_ms5gu7.mp4"
-        crossorigin="anonymous"></video>
+        crossorigin="anonymous">
+      </video>
 
       <video id="vid1" src="https://res.cloudinary.com/daqm1fsjr/video/upload/v1641141809/Video1_xjrzlx.mp4"
         crossorigin="anonymous">
@@ -81,6 +84,7 @@
     <a-entity id="example-target" mindar-image-target="targetIndex: 0">
       <a-plane id="example-plane" class="clickable" color="blue" opaciy="0.5" position="0 0 0" height="0.552" width="1"
         rotation="0 0 0"></a-plane>
+        <a-plane src="#vid1" position="0 0 0" rotation="0 0 0"></a-plane>
     </a-entity>
 
     <a-entity id="my-target" mindar-image-target="targetIndex: 1">
