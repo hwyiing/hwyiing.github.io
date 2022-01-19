@@ -50,6 +50,13 @@
         });
       });
 
+      myTarget.addEventListener("targetLost", event => {
+        var v = document.querySelector('#vid');
+        if (v){
+          v.pause();
+        }        
+      });
+
       myTarget1.addEventListener("targetFound", event => {
         console.log("target 1 found");
         // detect click event
@@ -58,6 +65,13 @@
           var v = document.querySelector('#vid1');
           v.play();
         });
+      });
+
+      myTarget1.addEventListener("targetLost", event => {
+        var v = document.querySelector('#vid1');
+        if (v){
+          v.pause();
+        }        
       });
 
       myTarget2.addEventListener("targetFound", event => {
@@ -70,6 +84,13 @@
         });
       });
 
+      myTarget2.addEventListener("targetLost", event => {
+        var v = document.querySelector('#vid2');
+        if (v){
+          v.pause();
+        }        
+      });
+
       myTarget3.addEventListener("targetFound", event => {
         console.log("target 3 found");
         // detect click event
@@ -78,6 +99,13 @@
           var v = document.querySelector('#vid3');
           v.play();
         });
+      });
+
+      myTarget3.addEventListener("targetLost", event => {
+        var v = document.querySelector('#vid3');
+        if (v){
+          v.pause();
+        }        
       });
     });
 
