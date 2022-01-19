@@ -74,7 +74,7 @@
         crossorigin="anonymous">
       </video>
 
-      <video id="vid1" src="https://res.cloudinary.com/daqm1fsjr/video/upload/v1641141809/Video1_xjrzlx.mp4"
+      <video id="vid1" src="Video1.mp4"
         crossorigin="anonymous">
       </video>
     </a-assets>
@@ -83,9 +83,7 @@
       raycaster="far: 10000; objects: .clickable"></a-camera>
 
     <a-entity id="example-target" mindar-image-target="targetIndex: 0">
-      <a-plane id="example-plane" class="clickable" color="blue" opaciy="0.5" position="0 0 0" height="0.552" width="1"
-        rotation="0 0 0"></a-plane>
-        <a-plane src="#vid1" position="0 0 0" rotation="0 0 0"></a-plane>
+      <a-plane id="example-plane" class="clickable" color="blue" src="#vid" position="0 0 0" rotation="0 0 0"></a-plane>
     </a-entity>
 
     <a-entity id="my-target" mindar-image-target="targetIndex: 1">
