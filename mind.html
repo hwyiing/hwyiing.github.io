@@ -30,60 +30,108 @@
     });
 
     window.addEventListener("load", function () {
-      const exampleTarget = document.querySelector('#example-target');
-      const examplePlane = document.querySelector('#example-plane');
+      const myTarget = document.querySelector('#target');
+      const myPlane = document.querySelector('#plane');
+      const myTarget1 = document.querySelector('#target-1');
+      const myPlane1 = document.querySelector('#plane-1');
+      const myTarget2 = document.querySelector('#target-2');
+      const myPlane2 = document.querySelector('#plane-2');
+      const myTarget3 = document.querySelector('#target-3');
+      const myPlane3 = document.querySelector('#plane-3');
 
       //detect target found
-      exampleTarget.addEventListener("targetFound", event => {
-        console.log("example target found");
-      });
-
-      // detect target lost
-      exampleTarget.addEventListener("targetLost", event => {
-        console.log("example target lost");
-      });
-
-      // detect click event
-      examplePlane.addEventListener("click", event => {
-        console.log("plane click");
-
-        var v = document.querySelector('#vid2');
-        v.play();
-
-      });
-
-      const myTarget = document.querySelector('#my-target');
-      const myPlane = document.querySelector("#my-plane");
       myTarget.addEventListener("targetFound", event => {
-          console.log("my target found");
-        });
-
-        // detect target lost
-        myTarget.addEventListener("targetLost", event => {
-          console.log("my target lost");
-        });
-
+        console.log("target found");
         // detect click event
         myPlane.addEventListener("click", event => {
-          console.log("my plane click");
-
-          var vid = document.querySelector('#vid1');
-          vid.play();
+          console.log("plane click");
+          var v = document.querySelector('#vid');
+          v.play();
         });
+      });
 
+      myTarget1.addEventListener("targetFound", event => {
+        console.log("target 1 found");
+        // detect click event
+        myPlane1.addEventListener("click", event => {
+          console.log("plane 1 click");
+          var v = document.querySelector('#vid1');
+          v.play();
+        });
+      });
 
+      myTarget2.addEventListener("targetFound", event => {
+        console.log("target 2 found");
+        // detect click event
+        myPlane2.addEventListener("click", event => {
+          console.log("plane 2 click");
+          var v = document.querySelector('#vid2');
+          v.play();
+        });
+      });
+
+      myTarget3.addEventListener("targetFound", event => {
+        console.log("target 3 found");
+        // detect click event
+        myPlane3.addEventListener("click", event => {
+          console.log("plane 3 click");
+          var v = document.querySelector('#vid3');
+          v.play();
+        });
+      });
     });
-
-
-
-
-
-
 
   </script>
 </head>
 
 <body>
+  <a-scene mindar-image="imageTargetSrc: ./targets.mind;" color-space="sRGB"
+    renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false">
+    <a-assets>
+      <video id="vid" src="https://res.cloudinary.com/daqm1fsjr/video/upload/v1641141809/thaiVideo.mp4"
+        crossorigin="anonymous">
+      </video>
+      <video id="vid1" src="https://res.cloudinary.com/daqm1fsjr/video/upload/v1641141778/thaiVideo1.mp4"
+        crossorigin="anonymous">
+      </video>
+      <video id="vid2"
+        src="https://res.cloudinary.com/daqm1fsjr/video/upload/v1642576736/video-output-5FAB095C-576E-4307-AAF0-F893EE07DA12_jpr7wl.mov"
+        crossorigin="anonymous">
+      </video>
+      <video id="vid3" src="https://res.cloudinary.com/daqm1fsjr/video/upload/v1642576284/thaiVideo3.mp4"
+        crossorigin="anonymous">
+      </video>
+
+    </a-assets>
+
+    <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;"
+      raycaster="far: 10000; objects: .clickable"></a-camera>
+
+    <a-entity id="target" mindar-image-target="targetIndex: 0">
+      <a-plane id="plane" class="clickable" src="#vid" width="1" height="0.552" scale="1.5 1.5 1.5" position="0 0 0"
+        rotation="0 0 0"></a-plane>
+    </a-entity>
+    <a-entity id="target-1" mindar-image-target="targetIndex: 1">
+      <a-plane id="plane-1" class="clickable" src="#vid1" width="0.552" height="1" scale="1.5 1.5 1.5" position="0 0 0"
+        rotation="0 0 0"></a-plane>
+    </a-entity>
+    <a-entity id="target-2" mindar-image-target="targetIndex: 2">
+      <a-plane id="plane-2" class="clickable" src="#vid2" scale="1.5 1.5 1.5" position="0 0 0" rotation="0 0 0">
+      </a-plane>
+    </a-entity>
+    <a-entity id="target-3" mindar-image-target="targetIndex: 3">
+      <a-plane id="plane-3" class="clickable" src="#vid3" scale="1.5 1.5 1.5" position="0 0 0" rotation="0 0 0">
+      </a-plane>
+    </a-entity>
+
+
+  </a-scene>
+</body>
+
+</html>
+
+<!-- <body>
   <a-scene mindar-image="imageTargetSrc: ./targets.mind;" color-space="sRGB"
     renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false"
     device-orientation-permission-ui="enabled: false">
@@ -111,6 +159,4 @@
 
 
   </a-scene>
-</body>
-
-</html>
+</body> -->
