@@ -16,9 +16,6 @@
 
       const sceneEl = document.querySelector('a-scene');
       const arSystem = sceneEl.systems["mindar-image-system"];
-      const exampleTarget = document.querySelector('#example-target');
-      const myTarget = document.querySelector('#my-target')
-      const examplePlane = document.querySelector('#example-plane');
 
       // arReady event triggered when ready
       sceneEl.addEventListener("arReady", (event) => {
@@ -29,6 +26,13 @@
       sceneEl.addEventListener("arError", (event) => {
         console.log("MindAR failed to start")
       });
+
+    });
+
+    window.addEventListener("load", function() {
+      const exampleTarget = document.querySelector('#example-target');
+      const myTarget = document.querySelector('#my-target')
+      const examplePlane = document.querySelector('#example-plane');
 
       //detect target found
       exampleTarget.addEventListener("targetFound", event => {
@@ -54,10 +58,7 @@
 
       });
 
-
-
-    });
-
+    })
 
 
   </script>
