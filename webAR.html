@@ -1,0 +1,47 @@
+<!-- this is custom attempt at putting videos -->
+<html>
+
+<head>
+    <link href="/css/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../libs/mindar/mindar-image-three.prod.js"></script>
+    <script src="./main.js" type="module"></script>
+    <style>
+        #my-ar-container {
+            height: 600px;
+            /* width: 400px;  */
+            /* position: relative; */
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="welcome" class="hidden">
+        <h1> WELCOME </h1>
+        <h2> TO UN YANG KOR DAI'S <a> AUGMENTED REAITY </a>
+            <h2> MENU ! </h2>
+        </h2>
+    </div>
+    <div id="container">
+        <button class="button-gradient" role="button" id="startbutton"><span class="text"> Begin
+            my AR Dining Experinece! </span></button>
+    </div>
+
+
+    <div id="my-ar-container">
+        <!-- load videos and "hide " them -->
+        <video id="video-1" playsinline webkit-playsinline loop autoplay muted src="https://res.cloudinary.com/daqm1fsjr/video/upload/v1641141809/thaiVideo.mp4 " style="display: none; " crossorigin="anonymous "></video>
+        <video id="video-3" playsinline webkit-playsinline loop autoplay muted src="https://res.cloudinary.com/daqm1fsjr/video/upload/v1642576736/pad%20thai.mov " style="display: none; " crossorigin="anonymous "></video>
+        <video id="video-4" playsinline webkit-playsinline loop autoplay muted src="https://res.cloudinary.com/daqm1fsjr/video/upload/v1642576284/thaiVideo3.mp4 " style="display: none; " crossorigin="anonymous "></video>
+
+    </div>
+
+
+</body>
+
+</html>
