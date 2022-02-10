@@ -40,14 +40,40 @@ function createGSplane(GSvideo) {
 
 document.addEventListener('DOMContentLoaded', () => {
     let video = null;
-    let video1 = null;
     let video2 = null;
     let video3 = null;
+    let video4 = null;
+    let GSvideo, GSvideo2, GSvideo3, GSvideo4 = null;
 
     const init = async() => {
         video = await document.getElementById('video-1');
+        video2 = await document.getElementById('video-2');
+        video3 = await document.getElementById('video-3');
+        video4 = await document.getElementById('video-4');
+        GSvideo = await document.getElementById('GS-1');
+        GSvideo2 = await document.getElementById('GS-stars');
+        GSvideo3 = await document.getElementById('GS-bestseller');
+        GSvideo4 = await document.getElementById('GS-recipe');
+
         video.play();
         video.pause();
+        video2.play();
+        video2.pause();
+        video3.play();
+        video3.pause();
+        video4.play();
+        video4.pause();
+        GSvideo.play();
+        GSvideo.pause();
+        GSvideo2.play();
+        GSvideo2.pause();
+        GSvideo3.play();
+        GSvideo3.pause();
+        GSvideo4.play();
+        GSvideo4.pause();
+
+
+
     }
     const start = async() => {
         const mindarThree = new window.MINDAR.IMAGE.MindARThree({
@@ -67,12 +93,12 @@ document.addEventListener('DOMContentLoaded', () => {
         //chroma overlay for target 1 
         // const GSvideo = await loadVideo("./chromavid.mp4");
 
-        const GSvideo = document.getElementById('GS-1');
+        //const GSvideo = document.getElementById('GS-1');
         const GSplane = createGSplane(GSvideo);
         anchor.group.add(GSplane);
 
         anchor.onTargetFound = () => {
-            // video.muted = false;
+            video.muted = false;
             video.play();
             GSvideo.play();
 
@@ -84,18 +110,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // target 2
 
-        const video2 = document.getElementById('video-2');
+        //const video2 = document.getElementById('video-2');
         const plane2 = createVideoPlane(video2, 1, 3 / 4);
         const anchor2 = mindarThree.addAnchor(1);
         anchor2.group.add(plane2);
 
         // chroma overlay for target 3
-        const GSvideo2 = document.getElementById('GS-stars');
+        //const GSvideo2 = document.getElementById('GS-stars');
         const GSplane2 = createGSplane(GSvideo2);
         anchor2.group.add(GSplane2)
 
         anchor2.onTargetFound = () => {
-            // video2.muted = false;
+            video2.muted = false;
             video2.play();
         }
         anchor2.onTargetLost = () => {
@@ -106,18 +132,18 @@ document.addEventListener('DOMContentLoaded', () => {
         // target 3
 
         //const video3 = createVideo("https://res.cloudinary.com/daqm1fsjr/video/upload/v1642576736/pad%20thai.mov")
-        const video3 = document.getElementById('video-3');
+        //const video3 = document.getElementById('video-3');
         const plane3 = createVideoPlane(video3, 1, 9 / 16);
         const anchor3 = mindarThree.addAnchor(2);
         anchor3.group.add(plane3);
 
         //chroma overlay for target 3
-        const GSvideo3 = document.getElementById('GS-bestseller');
+        //const GSvideo3 = document.getElementById('GS-bestseller');
         const GSplane3 = createGSplane(GSvideo3);
         anchor3.group.add(GSplane3)
 
         anchor3.onTargetFound = () => {
-            // video3.muted = false;
+            video3.muted = false;
             video3.play();
             GSvideo3.play();
         }
@@ -128,20 +154,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         //target 4
         //const video4 = createVideo("https://res.cloudinary.com/daqm1fsjr/video/upload/v1642576284/thaiVideo3.mp4")
-        const video4 = document.getElementById('video-4');
+        //const video4 = document.getElementById('video-4');
         const plane4 = createVideoPlane(video4, 1, 9 / 16);
         const anchor4 = mindarThree.addAnchor(3);
         anchor4.group.add(plane4);
 
         //chroma overlay for target 4 
-        const GSvideo4 = document.getElementById('GS-recipe');
+        //const GSvideo4 = document.getElementById('GS-recipe');
 
         const GSplane4 = createGSplane(GSvideo4);
         anchor4.group.add(GSplane4)
 
 
         anchor4.onTargetFound = () => {
-            // video4.muted = false;
+            video4.muted = false;
             video4.play();
             GSvideo4.play();
         }
@@ -185,6 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ARButton.textContent = "Start";
     ARButton.addEventListener("click", () => {
         start();
+        ARButton.style.display = "none";
     });
     document.body.appendChild(ARButton);
     // document.body.addEventListener('click', (e) => {
