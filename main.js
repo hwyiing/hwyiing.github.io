@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor.group.add(GSplane);
 
         anchor.onTargetFound = () => {
-            video.muted = false;
+            // video.muted = false;
             video.play();
             GSvideo.play();
 
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor2.group.add(GSplane2)
 
         anchor2.onTargetFound = () => {
-            video2.muted = false;
+            // video2.muted = false;
             video2.play();
         }
         anchor2.onTargetLost = () => {
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor3.group.add(GSplane3)
 
         anchor3.onTargetFound = () => {
-            video3.muted = false;
+            // video3.muted = false;
             video3.play();
             GSvideo3.play();
         }
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         anchor4.onTargetFound = () => {
-            video4.muted = false;
+            // video4.muted = false;
             video4.play();
             GSvideo4.play();
         }
