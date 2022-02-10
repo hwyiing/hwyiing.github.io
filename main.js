@@ -212,9 +212,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // });
     // document.body.appendChild(ARButton);
 
+    // code for listening to an event once only
+    // function addEventListenerOnce(target, type, listener, addOptions, removeOptions) {
+    //     target.addEventListener(type, function fn(event) {
+    //         target.removeEventListener(type, fn, removeOptions);
+    //         listener.apply(this, arguments);
+    //     }, addOptions);
+    // }
+
+    // addEventListenerOnce(document.getElementById("myelement"), "click", function (event) {
+    //     alert("You'll only see this once!");
+    // });
+
     document.body.addEventListener('click', (e) => {
         start();
         console.log('clicked!');
+        document.body.removeEventListener("click", fn);
     });
 
 });
