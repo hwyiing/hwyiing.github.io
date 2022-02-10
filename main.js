@@ -39,6 +39,16 @@ function createGSplane(GSvideo) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    let video = null;
+    let video1 = null;
+    let video2 = null;
+    let video3 = null;
+
+    const init = async() => {
+        video = await document.getElementById('video-1');
+        video.play();
+        video.pause();
+    }
     const start = async() => {
         const mindarThree = new window.MINDAR.IMAGE.MindARThree({
             container: document.querySelector("#my-ar-container"),
@@ -51,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //target 1 
 
         //const video = createVideo("https://res.cloudinary.com/daqm1fsjr/video/upload/v1641141809/thaiVideo.mp4");
-        const video = document.getElementById('video-1')
+        //const video = document.getElementById('video-1')
         const plane = createVideoPlane(video, 1, 9 / 16);
         const anchor = mindarThree.addAnchor(0);
         anchor.group.add(plane);
@@ -168,6 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //start button to overcome IOS browser
     const startButton = document.getElementById('startbutton');
     startButton.addEventListener('click', () => {
+        init();
         start();
         hideDiv();
         startButton.style.display = "none"; //button will disappear upon click
