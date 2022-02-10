@@ -1,7 +1,7 @@
-import { loadGLTF, loadVideo } from "../../libs/loader.js";
-import { LoadingManager } from "../../libs/three.js-r132/build/three.module.js";
-import { CSS3DObject } from '../../libs/three.js-r132/examples/jsm/renderers/CSS3DRenderer.js';
-import { createChromaMaterial } from '../../libs/chroma-video.js';
+// import { loadGLTF, loadVideo } from "../../libs/loader.js";
+// import { LoadingManager } from "../../libs/three.js-r132/build/three.module.js";
+// import { CSS3DObject } from '../../libs/three.js-r132/examples/jsm/renderers/CSS3DRenderer.js';
+import { createChromaMaterial } from './chroma-video.js';
 
 const THREE = window.MINDAR.IMAGE.THREE;
 
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const start = async() => {
         const mindarThree = new window.MINDAR.IMAGE.MindARThree({
             container: document.querySelector("#my-ar-container"),
-            imageTargetSrc: '../../assets/targets/targets.mind',
+            imageTargetSrc: 'targets.mind',
             uiLoading: "#loading",
         });
         const { renderer, scene, camera } = mindarThree;
