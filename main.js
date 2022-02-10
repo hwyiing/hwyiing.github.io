@@ -56,8 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
             uiLoading: "#loading",
         });
         const { renderer, scene, camera } = mindarThree;
-
-
         //target 1 
 
         //const video = createVideo("https://res.cloudinary.com/daqm1fsjr/video/upload/v1641141809/thaiVideo.mp4");
@@ -179,11 +177,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('startbutton');
     startButton.addEventListener('click', () => {
         init();
-        start();
         hideDiv();
         startButton.style.display = "none"; //button will disappear upon click
     })
 
-    //document.body.appendChild(startButton);
-    //start();
+    const ARButton = document.createElement("button");
+    ARButton.textContent = "Start";
+    ARButton.addEventListener("click", () => {
+        start();
+    });
+    document.body.appendChild(ARButton);
+    // document.body.addEventListener('click', (e) => {
+    //         start();
+    //         console.log('clicked!');
+    //     }
+
 });
