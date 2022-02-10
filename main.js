@@ -72,8 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
         GSvideo4.play();
         GSvideo4.pause();
 
-
-
     }
     const start = async() => {
         const mindarThree = new window.MINDAR.IMAGE.MindARThree({
@@ -165,7 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const GSplane4 = createGSplane(GSvideo4);
         anchor4.group.add(GSplane4)
 
-
         anchor4.onTargetFound = () => {
             video4.muted = false;
             video4.play();
@@ -207,16 +204,17 @@ document.addEventListener('DOMContentLoaded', () => {
         startButton.style.display = "none"; //button will disappear upon click
     })
 
-    const ARButton = document.createElement("button");
-    ARButton.textContent = "Start";
-    ARButton.addEventListener("click", () => {
+    // const ARButton = document.createElement("button");
+    // ARButton.textContent = "Start";
+    // ARButton.addEventListener("click", () => {
+    //     start();
+    //     ARButton.style.display = "none";
+    // });
+    // document.body.appendChild(ARButton);
+
+    document.body.addEventListener('click', (e) => {
         start();
-        ARButton.style.display = "none";
+        console.log('clicked!');
     });
-    document.body.appendChild(ARButton);
-    // document.body.addEventListener('click', (e) => {
-    //         start();
-    //         console.log('clicked!');
-    //     }
 
 });
