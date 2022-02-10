@@ -224,10 +224,9 @@ document.addEventListener('DOMContentLoaded', () => {
     //     alert("You'll only see this once!");
     // });
 
-    document.body.addEventListener('click', (e) => {
+    document.body.addEventListener('click', function fn(e) {
         start();
         console.log('clicked!');
         document.body.removeEventListener("click", fn);
     });
-
 });
