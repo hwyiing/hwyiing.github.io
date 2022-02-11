@@ -17,6 +17,34 @@
             /* position: relative; */
             overflow: hidden;
         }
+        
+        #loading {
+            display: flex;
+            background-color: #ffffff;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+        
+        #loading .inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        #loading.hidden {
+            display: none;
+        }
+        
+        #loading img {
+            align-self: center;
+        }
     </style>
 </head>
 
@@ -34,18 +62,11 @@
 
 
     <div id="my-ar-container">
-
-        <div id="my-ar-container">
-            <div id="loading" class="hidden">
-                <div id="inner" class="loader-wrapper">
-                    <span class="loader"><span class="loader-inner"></span></span>
-                    <h3> Loading...</h3>
-                </div>
-
+        <div id="loading" class="hidden">
+            <div class="inner">
+                <img src="./chef.png" />
             </div>
-
         </div>
-
         <!-- load videos and "hide " them -->
         <video id="video-1" playsinline webkit-playsinline loop autoplay muted src="https://res.cloudinary.com/daqm1fsjr/video/upload/v1644498928/un-yang-kor-dai-videos/uykd-1-grilled-chicken.mp4" style="display: none; " crossorigin="anonymous "></video>
 
