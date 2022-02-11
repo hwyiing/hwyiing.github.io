@@ -224,15 +224,11 @@ document.addEventListener('DOMContentLoaded', () => {
     //     alert("You'll only see this once!");
     // });
 
-    var eventHandler = function(e) {
+
+    document.body.addEventListener('click', (e) => {
         start();
-        // remove this handler
-        document.body.removeEventListener('click', eventHandler, false);
-
-        console.log("Added! Now removing this listener");
-    }
-
-    document.body.addEventListener("click", eventHandler);
+        console.log('clicked!');
+    });
 
 
 });
