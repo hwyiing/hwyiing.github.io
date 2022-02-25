@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // make this into helper function later
         // depending on whether we assume no. of loaded vid same as overlay vid
         // need to adjust the ohter helper functions as well
-        for (var i = 0; i < loadedTriggerVids.length; i++) {
+        for (var i = 0; i < loadedChromaVids.length; i++) {
 
             // const video = loadedTriggerVids[i];
             const GSvideo = loadedChromaVids[i];
