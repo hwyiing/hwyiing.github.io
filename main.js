@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const init = async() => {
         // pre-load videos by getting the DOM elements
-        loadedTriggerVids = await loadVideos(".trigger-vid");
+        //loadedTriggerVids = await loadVideos(".trigger-vid");
         loadedChromaVids = await loadVideos(".chroma-vid");
 
         //should listen for clicks only after first page
@@ -52,9 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // need to adjust the ohter helper functions as well
         for (var i = 0; i < loadedTriggerVids.length; i++) {
 
-            const video = loadedTriggerVids[i];
+            // const video = loadedTriggerVids[i];
             const GSvideo = loadedChromaVids[i];
-            const plane = createVideoPlane(video, 1, 9 / 16);
+            //const plane = createVideoPlane(video, 1, 9 / 16);
             const GSplane = createGSplane(GSvideo, 1, 3 / 4);
 
             anchors.push(mindarThree.addAnchor(i));
