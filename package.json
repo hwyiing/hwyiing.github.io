@@ -1,0 +1,29 @@
+{
+    "name": "hwyiing.github.io",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon index.js"
+    },
+
+
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hwyiing/hwyiing.github.io.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hwyiing/hwyiing.github.io/issues"
+    },
+    "homepage": "https://github.com/hwyiing/hwyiing.github.io#readme",
+    "dependencies": {
+        "axios": "^0.26.0",
+        "cloudinary": "^1.28.1",
+        "express": "^4.17.3"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
+}
